@@ -1,0 +1,17 @@
+{
+	"extends": ["airbnb-base"],
+	"env": {
+		"node": true,
+    "mocha": true
+	},
+  "parserOptions": {
+      "ecmaVersion": 8,
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true
+      }
+  },
+  "rules":{
+      "no-console":0,
+      "no-unused-expressions": 0
+  }
+}
