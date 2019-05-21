@@ -12,7 +12,7 @@ const validate = (data, schema, res, next) => {
 
 const validatePostList = (req, res, next) => {
   const schema = Joi.object().keys({
-    name: Joi.string(),
+    name: Joi.string().required(),
   });
 
   validate(req.body, schema, res, next);

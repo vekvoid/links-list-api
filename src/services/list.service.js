@@ -4,9 +4,9 @@ const listRepository = require('../repositories/list.repository');
 const createList = async (name) => {
   const uuid = uuidUitl.generate();
   console.log(`Creating ${name} list with Id '${uuid}'`);
-  const { uuid: insertedUuid } = await listRepository.setList({ uuid, name });
+  const { _id, ...list } = await listRepository.setList({ uuid, name });
   console.log('Created');
-  return { uuid: insertedUuid };
+  return list;
 };
 
 const findList = async (uuid) => {

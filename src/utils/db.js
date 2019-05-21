@@ -17,7 +17,7 @@ const setup = (connectionString, dbName, dbCollection) => {
 
 const connect = async () => {
   try {
-    client = await mongo.connect(settings.connectionString);
+    client = await mongo.connect(settings.connectionString, { useNewUrlParser: true });
     const db = await client.db(settings.dbName);
     collection = await db.collection(settings.dbCollection);
   } catch (error) {
